@@ -21,7 +21,7 @@ const Hero = () => {
         <div className="relative z-10 text-white flex flex-col justify-center h-full">
           <div className=" p-10 ">
             <motion.h1
-              className="text-[50px] text-white"
+              className="text-[50px] text-white max-sm:text-4xl"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
@@ -30,7 +30,7 @@ const Hero = () => {
             </motion.h1>
 
             <motion.h1
-              className="text-[50px] text-white"
+              className="text-[50px] text-white max-sm:text-4xl"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }} // Add a delay for staggered animation
@@ -40,7 +40,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="overflow-x-hidden">
+      <div className="overflow-x-hidden max-sm:overflow-x-hidden">
         <Service />
         <Expertise />
         <WhyYouChoose />

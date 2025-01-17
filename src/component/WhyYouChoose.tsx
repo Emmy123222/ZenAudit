@@ -11,7 +11,7 @@ const WhyYouChoose = () => {
         {/* Inner Static Content */}
         <div className="bg-black rounded-lg p-6">
           <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold">Why Choose Us</h2>
+            <h2 className="text-4xl font-bold max-sm:text-2xl">Why Choose Us</h2>
           </div>
           <div className="text-lg text-gray-300 space-y-4">
             <p>{content}</p>

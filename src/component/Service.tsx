@@ -13,7 +13,7 @@ const service = [
 
 const Service = () => {
   return (
-    <section className="relative bg-black text-white py-16 space-y-6">
+    <section className="relative bg-black text-white py-16 space-y-6 ">
       <svg
         className="absolute inset-0 w-full h-full"
         xmlns="http://www.w3.org/2000/svg"
@@ -34,53 +34,53 @@ const Service = () => {
           rotate: [0, 15, -15, 0],
         }}
         transition={{
-          duration: 3, // Animation duration
-          repeat: Infinity, // Repeat infinitely
-          repeatType: "loop", // Smooth looping
-          ease: "easeInOut", // Easing function
+          duration: 3,
+          repeat: Infinity,
+          ease: "easeInOut",
         }}
       >
-        <img src={img} alt="Left Cube" className="w-40" />
+        <img src={img} alt="Left Cube" className="sm:hidden max-sm:w-12" />
+        <img src={img} alt="Left Cube" className="w-40 max-sm:hidden" />
       </motion.div>
 
       {/* Section Title */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold">Services Offered</h2>
+        <h2 className="text-4xl font-bold max-sm:text-2xl">Services Offered</h2>
       </div>
 
       {/* Services Grid */}
-      <div className="flex justify-center gap-8 px-4 md:px-16 lg:px-32">
+      <div className="flex flex-wrap justify-center gap-6 px-4 max-sm:gap-4 max-sm:flex-col">
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="relative bg-white bg-opacity-5 border border-black rounded-[26px] flex justify-center items-center text-center p-6 w-[200px] h-[250px]"
-            initial={{ opacity: 0, y: 50 }} // Start hidden and below
-            animate={{ opacity: 1, y: 0 }} // Animate to visible and original position
+            className="relative bg-white bg-opacity-5 border border-gray-600 rounded-[26px] flex justify-center items-center text-center p-6 w-[200px] h-[250px] max-sm:w-full max-sm:h-[200px]"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.6,
-              delay: index * 0.2, // Stagger animation for each box
+              delay: index * 0.2,
               ease: "easeInOut",
             }}
           >
-            <p className="text-lg flex justify-center">{service.title}</p>
+            <p className="text-lg max-sm:text-sm">{service.title}</p>
           </motion.div>
         ))}
       </div>
 
-      <div className="flex justify-center gap-8 px-4 md:px-16 lg:px-32">
+      <div className="flex flex-wrap justify-center gap-6 px-4 max-sm:gap-4 max-sm:flex-col">
         {service.map((service, index) => (
           <motion.div
             key={index}
-            className="relative bg-white bg-opacity-5 border border-black flex justify-center items-center text-center p-6 rounded-[26px] w-[200px] h-[250px]"
-            initial={{ opacity: 0, y: 50 }} // Start hidden and below
-            animate={{ opacity: 1, y: 0 }} // Animate to visible and original position
+            className="relative bg-white bg-opacity-5 border border-gray-600 flex justify-center items-center text-center p-6 rounded-[26px] w-[200px] h-[250px] max-sm:w-full max-sm:h-[200px]"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.6,
-              delay: (services.length + index) * 0.2, // Continue stagger animation
+              delay: (services.length + index) * 0.2,
               ease: "easeInOut",
             }}
           >
-            <p className="text-lg">{service.title}</p>
+            <p className="text-lg max-sm:text-sm">{service.title}</p>
           </motion.div>
         ))}
       </div>
@@ -89,17 +89,17 @@ const Service = () => {
       <motion.div
         className="absolute bottom-2/2 right-0 transform translate-y-1/2 translate-x-3/2"
         animate={{
-          y: [0, -20, 0], // Vertical movement
-          rotate: [0, 15, -15, 0], // Rotation
+          y: [0, -20, 0],
+          rotate: [0, 15, -15, 0],
         }}
         transition={{
           duration: 2,
           repeat: Infinity,
-          repeatType: "loop",
           ease: "easeInOut",
         }}
       >
-        <img src={img} alt="Right Cube" className="w-40" />
+        <img src={img} alt="Right Cube" className="sm:hidden max-sm:w-12" />
+        <img src={img} alt="Left Cube" className="w-40 max-sm:hidden" />
       </motion.div>
     </section>
   );

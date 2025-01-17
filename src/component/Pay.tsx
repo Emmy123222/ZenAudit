@@ -5,7 +5,9 @@ const Pay = () => {
         <div className="bg-black rounded-lg p-6">
           <div className="text-center mb-12">
             {/* Title */}
-            <h1 className="text-4xl font-bold">Pay-Per-Vulnerability</h1>
+            <h1 className="text-4xl font-bold max-sm:text-2xl">
+              Pay-Per-Vulnerability
+            </h1>
           </div>
 
           {/* Description */}

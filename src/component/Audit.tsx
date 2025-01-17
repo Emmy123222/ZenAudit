@@ -48,10 +48,12 @@ const Audit = () => {
           ease: "linear", // Smooth constant speed
         }}
       >
-        <img src={img} alt="Right Cube" className="w-40" />
+        <img src={img} alt="Right Cube" className="w-40 max-sm:hidden" />
       </motion.div>
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold">Audit Engagement Overview</h1>
+        <h1 className="text-4xl font-bold max-sm:text-2xl">
+          Audit Engagement Overview
+        </h1>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 container mx-auto max-w-6xl">
         {cards.map((card, index) => (
@@ -77,7 +79,7 @@ const Audit = () => {
           ease: "linear", // Smooth constant speed
         }}
       >
-        <img src={img} alt="Right Cube" className="w-40" />
+        <img src={img} alt="Right Cube" className="w-40 max-sm:hidden" />
       </motion.div>
     </div>
   );

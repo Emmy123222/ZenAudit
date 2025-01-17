@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -12,15 +11,15 @@ const About = () => {
   ];
 
   return (
-    <div id="About" className=" bg-black p-10  w-full h-screen ">
+    <div id="About" className="bg-black p-10 w-full ">
       {/* Title with Motion */}
       <motion.div
-        className="flex  justify-center mt-40  "
+        className="flex justify-center mt-40 max-sm:mt-20"
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
       >
-        <h1 className="text-white text-[50px]">
+        <h1 className="text-white text-[50px] max-sm:text-[30px] text-center">
           <strong>{title}</strong>
         </h1>
       </motion.div>
@@ -29,7 +28,7 @@ const About = () => {
       {content.map((line, index) => (
         <motion.p
           key={index}
-          className="text-white text-[30px] flex justify-center"
+          className="text-white text-[30px] max-sm:text-[18px] flex justify-center text-center max-sm:px-4"
           initial={{ y: 25, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: index * 0.2 }}

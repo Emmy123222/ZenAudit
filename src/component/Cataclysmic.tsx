@@ -5,7 +5,7 @@ const Cataclysmic = () => {
       <div className="relative p-[3px] rounded-lg bg-gradient-to-r from-gray-400 via-gray-600 to-gray-800 bg-[length:200%_200%] animate-borderMove w-full max-w-4xl mx-auto">
         <div className="bg-black rounded-lg p-6">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold">
+            <h1 className="text-4xl font-bold max-sm:text-2xl">
               Cataclysmic and Stateful Fuzzing
             </h1>
           </div>
