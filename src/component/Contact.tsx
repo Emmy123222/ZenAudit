@@ -2,24 +2,9 @@ import { motion } from "framer-motion";
 import img from "../../src/assets/image2.png";
 
 const Contact = () => {
-  // Variants for animations
   const containerVariant = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 1 } },
-  };
-
-  const inputVariant = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.3 } },
-  };
-
-  const buttonVariant = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.6, delay: 0.6 },
-    },
   };
 
   return (
@@ -53,58 +38,22 @@ const Contact = () => {
             Get in touch
           </motion.h2>
 
-          {/* Form */}
-          <motion.form className="space-y-6">
-            <div className="flex flex-col gap-6">
-              {/* First Name */}
-              <motion.input
-                type="text"
-                placeholder="First Name"
-                className="w-full px-4 py-2 h-[60px] rounded-[24px] bg-black/40 text-white placeholder-gray-400 border border-gray-600 focus:ring-2 focus:ring-black focus:outline-none"
-                variants={inputVariant}
-              />
-              {/* Last Name */}
-              <motion.input
-                type="text"
-                placeholder="Last Name"
-                className="w-full px-4 py-2 h-[60px] rounded-[24px] bg-black/40 text-white placeholder-gray-400 border border-gray-600 focus:ring-2 focus:ring-black focus:outline-none"
-                variants={inputVariant}
-              />
-            </div>
-            {/* Email Address */}
-            <motion.input
-              type="email"
-              placeholder="Email Address"
-              className="w-full px-4 py-2 h-[60px] rounded-[24px] bg-black/40 text-white placeholder-gray-400 border border-gray-600 focus:ring-2 focus:ring-black focus:outline-none"
-              variants={inputVariant}
-            />
-            {/* Company */}
-            <motion.input
-              type="text"
-              placeholder="Company"
-              className="w-full px-4 py-2 h-[60px] rounded-[24px] bg-black/40 text-white placeholder-gray-400 border border-gray-600 focus:ring-2 focus:ring-black focus:outline-none"
-              variants={inputVariant}
-            />
-            {/* Message */}
-            <motion.textarea
-              placeholder="Your Message"
-              rows={5}
-              className="w-full px-4 py-2 h-[60px] rounded-[24px] bg-black/40 text-white placeholder-gray-400 border border-gray-600 focus:ring-2 focus:ring-black focus:outline-none"
-              variants={inputVariant}
-            ></motion.textarea>
-            {/* Submit Button */}
-            <motion.div
-              className="flex justify-center items-center"
-              variants={buttonVariant}
+          {/* Google Form */}
+          <motion.div
+            className="w-full max-w-4xl mx-auto bg-white p-5 rounded-[26px] shadow-lg max-sm:w-[300px]"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSdgPZ63ZDEST4HUJgA-ccWWNbaCbP-9DGjXYELljDShZS9Nfw/viewform?embedded=true"
+              width="400"
+              height="400"
+              className="max-sm:w-[250px]"
             >
-              <button
-                type="submit"
-                className="w-[300px] h-[60px] py-3 bg-black text-white font-bold text-lg rounded-[24px] transition duration-300"
-              >
-                Submit
-              </button>
-            </motion.div>
-          </motion.form>
+              Loading…
+            </iframe>
+          </motion.div>
         </div>
       </div>
     </motion.div>
