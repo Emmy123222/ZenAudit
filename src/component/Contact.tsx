@@ -40,7 +40,7 @@ const Contact = () => {
 
           {/* Google Form */}
           <motion.div
-            className="w-full max-w-4xl mx-auto bg-white p-5 rounded-[26px] shadow-lg max-sm:w-[300px]"
+            className="w-full max-w-4xl mx-auto bg-white p-5 rounded-[26px] shadow-lg max-sm:w-fit"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -49,7 +49,7 @@ const Contact = () => {
               src="https://docs.google.com/forms/d/e/1FAIpQLSdgPZ63ZDEST4HUJgA-ccWWNbaCbP-9DGjXYELljDShZS9Nfw/viewform?embedded=true"
               width="400"
               height="400"
-              className="max-sm:w-[250px]"
+              className="max-sm:w-fit "
             >
               Loading…
             </iframe>
