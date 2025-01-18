@@ -16,7 +16,7 @@ const Contact = () => {
       variants={containerVariant}
     >
       <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-      <div className="relative z-10 flex flex-col justify-center items-center">
+      <div className="relative z-10 flex flex-col justify-center items-center overflow-x-hidden">
         <div className="p-28 space-y-12">
           {/* Contact Header */}
           <motion.div
